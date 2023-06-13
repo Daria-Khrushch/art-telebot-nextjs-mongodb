@@ -6,6 +6,7 @@ export const GET = async (req, res) => {
   try {
     const { query } = parse(req.url, true);
     const { title, theme, language } = query;
+
     // console.log("title", title);
     // console.log("theme", theme);
     // console.log("language", language);

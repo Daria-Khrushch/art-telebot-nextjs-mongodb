@@ -37,7 +37,8 @@ export default function Filters({ channels, setSearchQuery, onSearch, searchQuer
       <form id="search" onSubmit={onSearch} className="by_title">
         <input
           value={searchQuery || ""}
-          onChange={(event) => setSearchQuery(event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1))}
+          onChange={(event) => setSearchQuery(event.target.value)}
+          // onChange={(event) => setSearchQuery(event.target.value.charAt(0).toLowerCase() + event.target.value.slice(1))}
           className="filtres-input"
           placeholder="Поиск..."
         />

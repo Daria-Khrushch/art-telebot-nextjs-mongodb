@@ -7,8 +7,9 @@ export const POST = async (req) => {
   };
   try {
     const data = await req.json();
+    console.log(data.id)
     const updatedChannel = await prisma.channel.update({
-      where: { id: data.id },
+      where: { _id: data.id },
       data: { updated_at: updatedAtInput, ...data },
     });
 

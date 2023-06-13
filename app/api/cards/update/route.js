@@ -7,14 +7,15 @@ export const POST = async (req) => {
   };
   try {
     const data = await req.json();
-    console.log(data.id)
+     const { id, ...dataWithoutId } = data;
     const updatedChannel = await prisma.channel.update({
-      where: { _id: data.id },
-      data: { updated_at: updatedAtInput, ...data },
+      where: { id: data.id },
+      data: { updated_at: updatedAtInput, ...dataWithoutId },
     });
 
     return new Response(JSON.stringify(updatedChannel), { status: 200 });
   } catch (error) {
+     console.log(error)
     return new Response(error, { status: 500 });
   }
 };

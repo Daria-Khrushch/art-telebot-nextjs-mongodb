@@ -19,7 +19,7 @@ model buyer {
   ads_sum           Int?
   channel_name      String?
   created_at        DateTime @default(now())
-  channel_id        Int
+  channel_id        String
 }
 
 model channel {

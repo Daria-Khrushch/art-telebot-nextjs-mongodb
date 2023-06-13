@@ -42,6 +42,7 @@ nav {
     color: #2c3e50;
 }
 
+
 .other {
     display: flex;
     align-items: center;
@@ -88,6 +89,10 @@ h2 {
 }
 
 /* FILTRES */
+
+.name{
+    text-transform: capitalize;
+}
 
 .filtrs-option {
     cursor: pointer;

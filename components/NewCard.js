@@ -49,7 +49,7 @@ const NewCard = () => {
         },
         body: JSON.stringify({
           avatar: ava,
-          name: channelName,
+          name: channelName.charAt(0).toUpperCase() + channelName.slice(1),
           theme: theme,
           language: language,
           description: description,
